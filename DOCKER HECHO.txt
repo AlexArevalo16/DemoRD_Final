@@ -1,0 +1,23 @@
+
+docker build -t flask_demo .
+docker run -it -p 8181:81 -d flask_demo
+
+
+1  sudo yum update
+    2  yum install docker
+    3  yum install python3-pip
+    4  pip3 install flask
+    6  yum install git
+    7  git clone https://github.com/AlexArevalo16/DemoRD_Final.git
+    9  cd DemoRD_Final/
+   24  systemctl enable docker
+   25  systemctl start docker
+   26  systemctl status docker
+   62  docker build -t flask_demo .
+   63  docker ps -a
+   64  docker images
+   68  docker run -it -p 8181:81 -d flask_demo
+   69  docker ps -a
+
+docker rm id_container
+docker rmi flask_demo
