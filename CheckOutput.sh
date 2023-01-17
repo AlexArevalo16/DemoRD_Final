@@ -1,7 +1,7 @@
 #!/bin/bash
 clear; clear;
-if test -f /root/RD_DEMO_FINAL/output.txt; then
-	rm -rf /root/RD_DEMO_FINAL/output.txt
+if test -f `pwd`/output.txt; then
+        rm -rf `pwd`/output.txt
 fi
 day=$(date +%A)
 month=$(date +%B)
@@ -16,23 +16,23 @@ echo -e "\t\e[36m   ----- Check Output from Palindrome, RD_DEMO -----\e[0m"
 echo " "
 
 function owner(){
-	echo " "
-	echo -e "\e[36m Powered by @Alejandro Arevalo\e[0m"
-	echo " "
+        echo " "
+        echo -e "\e[36m Powered by @Alejandro Arevalo\e[0m"
+        echo " "
 }
 
 function output(){
-	read -p "How many time do you want to hit the API: " tms
-	read -p "Please enter a word: " word
-	i=1
-	while [ $i -le $tms ]
-		do
-			curl localhost:8181/palindrome/$word >> output.txt
-			echo " " >> output.txt
-			echo "---------- Output No $i ----------" >> output.txt
-			sleep 1
-			let i+=1
-		done
-		owner 
+        read -p "How many time do you want to hit the API: " tms
+        read -p "Please enter a word: " word
+        i=1
+        while [ $i -le $tms ]
+                do
+                        curl localhost:80/palindrome/$word >> output.txt
+                        echo " " >> output.txt
+                        echo "---------- Output No $i ----------" >> output.txt
+                        sleep 1
+                        let i+=1
+                done
+                owner 
 }
 output
