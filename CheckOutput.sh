@@ -33,6 +33,8 @@ function output(){
                         sleep 1
                         let i+=1
                 done
+                echo " "
+                cat output.txt
                 owner 
 }
 output
