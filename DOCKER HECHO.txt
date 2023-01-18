@@ -1,4 +1,5 @@
 
+
 docker build -t flask_demo .
 docker run -it -p 8181:81 -d flask_demo
 
@@ -16,7 +17,8 @@ docker run -it -p 8181:81 -d flask_demo
    62  docker build -t flask_demo .
    63  docker ps -a
    64  docker images
-   68  docker run -it -p 8181:81 -d flask_demo
+   68  docker run -it -p 8181:81 -d flask_demo ------no allow
+   new docker run -it -p 80:81 -d flask_demo
    69  docker ps -a
 
 docker rm id_container
