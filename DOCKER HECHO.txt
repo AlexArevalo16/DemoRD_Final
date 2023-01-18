@@ -23,3 +23,12 @@ docker run -it -p 8181:81 -d flask_demo
 
 docker rm id_container
 docker rmi flask_demo
+
+
+from cloud shell
+
+get internal ip address
+gcloud compute instances list --filter=nameofinstance --format "get(networkInterfaces[0].networkIP)"
+
+get external ip address
+gcloud compute instances list --filter="name=my-instance" --format "get(networkInterfaces[0].accessConfigs[0].natIP)"
