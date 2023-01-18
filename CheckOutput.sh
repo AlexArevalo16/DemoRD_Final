@@ -22,7 +22,7 @@ function owner(){
 }
 
 function output(){
-        read -p "How many time do you want to hit the API: " tms
+        read -p "How many times do you want to hit the API: " tms
         read -p "Please enter a word: " word
         i=1
         while [ $i -le $tms ]
